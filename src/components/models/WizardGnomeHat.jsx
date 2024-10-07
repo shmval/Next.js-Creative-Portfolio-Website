@@ -10,6 +10,7 @@ Title: Wizard Gnome
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from "@react-three/fiber";
+import { Color } from 'three';
 
 const WizardGnomeHat = React.memo(function WizardGnomeHat(props) {
     const { nodes, materials } = useGLTF("/models/wizard_gnome.glb");
