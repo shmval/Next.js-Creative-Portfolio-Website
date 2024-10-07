@@ -13,7 +13,7 @@ import { useFrame } from "@react-three/fiber";
 import { Color } from 'three';
 
 const WizardGnomeHat = React.memo(function WizardGnomeHat(props) {
-    const { nodes, materials } = useGLTF("/models/wizard_gnome.glb");
+    const { nodes, materials } = useGLTF("/models/gnome.glb");
 
     const modelRef = useRef();
 
@@ -26,14 +26,14 @@ const WizardGnomeHat = React.memo(function WizardGnomeHat(props) {
         <group {...props} dispose={null} ref={modelRef} position={[0, 0, 0]} scale={[0.55, 0.55, 0.55]} rotation={[0.25, 0, 0]}>
           <group position={[0, -2, 0]} rotation={[-Math.PI / 2, 0, 0]}>
             <group rotation={[Math.PI / 2, 0, 0]}>
-              <group position={[0, 3, 0]}>
-                <mesh geometry={nodes.Object_4.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_5.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_6.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_7.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_8.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_9.geometry} material={materials.Mtze} />
-              </group>
+                <group position={[0, 3.426, 0]}>
+                    <mesh geometry={nodes.Object_4.geometry} material={materials.Mtze} />
+                    <mesh geometry={nodes.Object_5.geometry} material={materials.Mtze} />
+                    <mesh geometry={nodes.Object_6.geometry} material={materials.Mtze} />
+                    <mesh geometry={nodes.Object_7.geometry} material={materials.Mtze} />
+                    <mesh geometry={nodes.Object_8.geometry} material={materials.Mtze} />
+                    <mesh geometry={nodes.Object_9.geometry} material={materials.Mtze} />
+                </group>
              
             </group>
           </group>
@@ -44,4 +44,4 @@ const WizardGnomeHat = React.memo(function WizardGnomeHat(props) {
 
 export default WizardGnomeHat;
 
-useGLTF.preload('/models/wizard_gnome.glb')
+useGLTF.preload('/models/gnome.glb')
