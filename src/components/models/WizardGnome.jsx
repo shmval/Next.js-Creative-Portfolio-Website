@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from "@react-three/fiber";
 
 const WizardGnome = React.memo(function WizardGnome(props) {
-    const { nodes, materials } = useGLTF("/models/wizard_gnome.glb");
+    const { nodes, materials } = useGLTF("/models/gnewgnewgnome.glb");
 
     const modelRef = useRef();
 
@@ -26,30 +26,54 @@ const WizardGnome = React.memo(function WizardGnome(props) {
           <group position={[0, 0.044, 0]} rotation={[-Math.PI / 2, 0, 0]}>
             <group rotation={[Math.PI / 2, 0, 0]}>
             <group position={[0.016, 1.215, 0.683]}>
-                <mesh geometry={nodes.Object_23.geometry} material={materials.Haare} />
-                <mesh geometry={nodes.Object_24.geometry} material={materials.Haare} />
+                <mesh geometry={nodes.Object_23.geometry} material={nodes.Object_23.material} />
+                <mesh geometry={nodes.Object_24.geometry} material={materials['Haare.007']} />
             </group>
             <group position={[0.016, 1.61, 0]}>
-                <mesh geometry={nodes.Object_11.geometry} material={materials['Nase.001']} />
                 <mesh geometry={nodes.Object_12.geometry} material={materials.Haare} />
-                <mesh geometry={nodes.Object_13.geometry} material={materials.Mantel} />
+                <mesh geometry={nodes.Object_13.geometry} material={materials['Material.004']} />
                 <mesh geometry={nodes.Object_14.geometry} material={materials.Mantel} />
                 <mesh geometry={nodes.Object_15.geometry} material={materials.Mantel} />
-                <mesh geometry={nodes.Object_16.geometry} material={materials.Mantel} />
+                <mesh geometry={nodes.Object_16.geometry} material={materials['Material.006']} />
             </group>
             <group position={[0, 3.426, 0]}>
                 <mesh geometry={nodes.Object_4.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_5.geometry} material={materials.Mtze} />
                 <mesh geometry={nodes.Object_6.geometry} material={materials.Mtze} />
                 <mesh geometry={nodes.Object_7.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_8.geometry} material={materials.Mtze} />
-                <mesh geometry={nodes.Object_9.geometry} material={materials.Mtze} />
+                <mesh geometry={nodes.Object_9.geometry} material={materials['Mtze.006']} />
             </group>
             <group position={[0.016, 0.499, 0]} rotation={[-0.075, 0, 0]}>
                 <mesh geometry={nodes.Object_18.geometry} material={materials['Material.003']} />
                 <mesh geometry={nodes.Object_19.geometry} material={materials['Material.003']} />
             </group>
-            <mesh geometry={nodes.Object_21.geometry} material={materials.Nase} position={[0.011, 2.068, 0.548]} />
+            </group>
+        </group>
+        <group position={[0, 0.044, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+            <group rotation={[Math.PI / 2, 0, 0]}>
+            <group position={[0.016, 1.215, 0.683]}>
+                <mesh geometry={nodes.Object_23001.geometry} material={materials['Haare.001']} />
+                <mesh geometry={nodes.Object_24001.geometry} material={materials['Haare.001']} />
+            </group>
+            <group position={[0.016, 1.61, 0]}>
+                <mesh geometry={nodes.Object_11001.geometry} material={materials['Material.005']} />
+                <mesh geometry={nodes.Object_12001.geometry} material={materials['Haare.001']} />
+                <mesh geometry={nodes.Object_13001.geometry} material={materials['Mantel.001']} />
+                <mesh geometry={nodes.Object_14001.geometry} material={materials['Mantel.001']} />
+                <mesh geometry={nodes.Object_15001.geometry} material={materials['Mantel.001']} />
+                <mesh geometry={nodes.Object_16001.geometry} material={materials['Mantel.001']} />
+            </group>
+            <group position={[0, 3.426, 0]}>
+                <mesh geometry={nodes.Object_4001.geometry} material={materials['Mtze.001']} />
+                <mesh geometry={nodes.Object_5001.geometry} material={materials['Mtze.001']} />
+                <mesh geometry={nodes.Object_6001.geometry} material={materials['Mtze.001']} />
+                <mesh geometry={nodes.Object_7001.geometry} material={materials['Mtze.001']} />
+                <mesh geometry={nodes.Object_9001.geometry} material={materials['Mtze.001']} />
+            </group>
+            <group position={[0.016, 0.499, 0]} rotation={[-0.075, 0, 0]}>
+                <mesh geometry={nodes.Object_18001.geometry} material={materials['Material.001']} />
+                <mesh geometry={nodes.Object_19001.geometry} material={materials['Material.001']} />
+            </group>
+            <mesh geometry={nodes.Object_21001.geometry} material={materials['Nase.002']} position={[0.011, 2.068, 0.548]} />
             </group>
         </group>
         </group>
@@ -59,4 +83,4 @@ const WizardGnome = React.memo(function WizardGnome(props) {
 
 export default WizardGnome;
 
-useGLTF.preload('/models/wizard_gnome.glb')
+useGLTF.preload('/models/gnewgnewgnome.glb')
