@@ -17,15 +17,13 @@ const WizardGnome = React.memo(function WizardGnome(props) {
     const modelRef = useRef();
 
     useFrame((state) => {
-        modelRef.current.position.y = 
-          -1.5 + Math.sin(state.clock.elapsedTime) * 0.5;
-        modelRef.current.position.x =
-          0 + Math.sin(state.clock.elapsedTime) * 0.5;
-      });
+
+        modelRef.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.5;
+
+    });
 
     return (
-    <group {...props} dispose={null} ref={modelRef} position={[0, 0, 0]} scale={[0.45, 0.45, 0.45]} rotation={[0.25, 0, 0]}>
-        <group position={[0, 0.55, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+    <group {...props} dispose={null} ref={modelRef} position={[0, -1, 0]} scale={[0.45, 0.45, 0.45]} rotation={[-1.5, 0, 0]}>
             <group rotation={[Math.PI / 2, 0, 0]}>
                 <group position={[0.016, 1.215, 0.683]}>
                     <mesh geometry={nodes.Object_23.geometry} material={materials.Haare} />
@@ -53,7 +51,6 @@ const WizardGnome = React.memo(function WizardGnome(props) {
                 </group>
                 <mesh geometry={nodes.Object_21.geometry} material={materials.Nase} position={[0.011, 2.068, 0.548]} />
             </group>
-        </group>
     </group>
       )
 
