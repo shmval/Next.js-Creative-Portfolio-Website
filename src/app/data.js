@@ -11,7 +11,7 @@ Websites:
   --background: 27 27 27;
   --foreground: 225 225 225;
   --muted: 115 115 115;
-  --accent: 254 254 91; #FEFE5B
+  --accent: ; #FEFE5B
 }
 
 */
@@ -93,7 +93,6 @@ export const BtnList = [
   { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
-  { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",
     link: "https://www.github.com/codebucks27",

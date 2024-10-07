@@ -1,11 +1,18 @@
 import Image from "next/image";
-import bg from "../../public/background/home-background.png";
+
+import bg from '../../public/background/forest-1699079.jpg'
+//import bg from "../../public/background/home-background.png";
 import RenderModel from "@/components/RenderModel";
 // import Wizard from "@/components/models/Wizard";
 import Navigation from "@/components/navigation";
 
 import dynamic from "next/dynamic";
 const Wizard = dynamic(() => import("@/components/models/Wizard"), {
+  ssr: false,
+});
+
+
+const WizardGnome = dynamic(() => import("@/components/models/WizardGnome"), {
   ssr: false,
 });
 
@@ -24,7 +31,7 @@ export default function Home() {
       <div className="w-full h-screen">
         <Navigation />
         <RenderModel>
-          <Wizard />
+          <WizardGnome />
         </RenderModel>
       </div>
     </main>
