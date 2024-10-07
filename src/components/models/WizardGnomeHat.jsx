@@ -22,7 +22,7 @@ const WizardGnomeHat = React.memo(function WizardGnomeHat(props) {
       });
 
     return (
-        <group {...props} dispose={null} ref={modelRef} position={[0, 0, 0]} scale={[0.60, 0.60, 0.60]} rotation={[0.25, 0, 0]}>
+        <group {...props} dispose={null} ref={modelRef} position={[0, 0, 0]} scale={[0.55, 0.55, 0.55]} rotation={[0.25, 0, 0]}>
           <group position={[0, -2, 0]} rotation={[-Math.PI / 2, 0, 0]}>
             <group rotation={[Math.PI / 2, 0, 0]}>
               <group position={[0, 3, 0]}>
