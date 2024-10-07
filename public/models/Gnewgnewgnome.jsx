@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/gnewgnewgnome.glb')
+  const { nodes, materials } = useGLTF('/wizard_gnome.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0.044, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -67,4 +67,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/gnewgnewgnome.glb')
+useGLTF.preload('/wizard_gnome.glb')
