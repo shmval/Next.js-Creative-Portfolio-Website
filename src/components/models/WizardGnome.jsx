@@ -23,7 +23,7 @@ const WizardGnome = React.memo(function WizardGnome(props) {
 
     return (
     <group {...props} dispose={null} ref={modelRef} position={[0, -1.5, 0]} scale={[0.45, 0.45, 0.45]} rotation={[0.25, 0, 0]}>
-        <group position={[0, 0.044, 0]} rotation={[-Math.PI / 1, 0, 0]}>
+        <group position={[0, 0.044, 0]} rotation={[-Math.PI / 2, 0, 0]}>
             <group rotation={[Math.PI / 2, 0, 0]}>
                 <group position={[0.016, 1.215, 0.683]}>
                     <mesh geometry={nodes.Object_23.geometry} material={materials.Haare} />
